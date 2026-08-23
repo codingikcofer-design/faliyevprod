@@ -108,22 +108,8 @@
         </div>
         <div class="actions-row">
           <a href="book.html" class="btn btn-primary" data-testid="button-start-reading">📖 Начать читать →</a>
-          <a href="#description" class="link-underline" data-testid="link-book-description">О книге</a>
+          <a href="book.html#about-book" class="link-underline" data-testid="link-book-description">О книге</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="description" class="section-alt">
-    <div class="site-container section description-grid">
-      <div>
-        <p class="eyebrow">О книге</p>
-        <h2 class="section-title narrow">Разговор без готовых ответов</h2>
-      </div>
-      <div class="description-text">
-        <p>В этой глубокой и откровенной книге-манифесте общественный деятель Фуад Алиев предлагает читателю совершить смелый интеллектуальный прорыв — отделить величие Космического Архитектора от корыстных догм человеческих организаций.</p>
-        <p>Автор шаг за шагом раскрывает, как элиты прошлого «приватизировали» имя Творца для развязывания войн, контроля и обогащения. Объединяя выводы Канта, Гоббса, Эйнштейна и Франкла, книга ищет осознанный путь к исцелению духа через Любовь, а не страх.</p>
-        <p class="pull-quote">«Изначальный код Вселенной» — книга о праве начать всё заново.</p>
       </div>
     </div>
   </section>
@@ -147,31 +133,28 @@
     </div>
   </section>
 
-  <section class="section-card">
+  <section class="section-card" id="all-books-section">
     <div class="site-container section">
-      <div class="section-head">
+      <div class="shelf-head">
         <div>
-          <p class="eyebrow">Библиотека</p>
-          <h2 class="section-title">Книги Ф. Алиева</h2>
+          <h2 class="shelf-title-main">Все книги</h2>
+          <p class="shelf-count">1 книга в библиотеке</p>
         </div>
-        <span class="section-count">В процессе пополнения</span>
+        <a href="#all-books-section" class="shelf-all-link">Все книги <span>›</span></a>
       </div>
-      <div class="library-grid">
-        <a href="book.html" class="library-card" data-testid="card-book-iznachalnyy">
-          <img src="assets/cover.jpg" alt="">
-          <span>
-            <span class="library-tag">Доступна</span>
-            <span class="library-title">Изначальный код Вселенной</span>
-            <span class="library-link">Читать книгу →</span>
-          </span>
-        </a>
-        <div class="library-card library-card-soon">
-          <div class="library-icon">📄</div>
-          <div>
-            <p class="library-tag muted">Скоро</p>
-            <p class="library-title">Новая рукопись</p>
-            <p class="library-hint">Следите за обновлениями библиотеки</p>
+      <div class="shelf-row">
+        <a href="book.html" class="shelf-card" data-testid="card-book-iznachalnyy">
+          <div class="shelf-cover">
+            <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»">
           </div>
+          <div class="shelf-stars" aria-hidden="true"><span class="filled">★★★★</span><span class="empty">★</span></div>
+          <p class="shelf-book-title">Изначальный код Вселенной</p>
+          <p class="shelf-author">Фуад Алиев</p>
+        </a>
+        <div class="shelf-card shelf-card-soon" data-testid="card-book-soon">
+          <div class="shelf-cover shelf-cover-soon">📄</div>
+          <p class="shelf-book-title muted-title">Новая рукопись</p>
+          <p class="shelf-author muted-author">Скоро</p>
         </div>
       </div>
     </div>
