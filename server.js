@@ -4,10 +4,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Раздаём все файлы из папки public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Любой неизвестный маршрут — отдаём главную страницу (одностраничный сайт)
+// Явные маршруты для страниц
+app.get('/book', (req, res) => res.sendFile(path.join(__dirname, 'public', 'book.html')));
+
+// Всё остальное — на главную
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
