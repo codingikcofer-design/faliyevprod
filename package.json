@@ -1,7 +1,7 @@
 {
   "name": "faliyev-prod-site",
   "version": "1.0.0",
-  "description": "Официальный сайт Faliyev Prod — Фуад Алиев",
+  "description": "Faliyev Prod — библиотека Фуада Алиева",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
