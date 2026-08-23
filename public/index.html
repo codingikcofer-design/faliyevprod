@@ -81,35 +81,25 @@
   </section>
 
   <section id="books" class="site-container section">
-    <div class="section-head">
+    <div class="shelf-head">
       <div>
-        <p class="eyebrow">Избранная книга</p>
-        <h2 class="section-title">Начните с главной книги</h2>
+        <h2 class="shelf-title-main">Все книги</h2>
+        <p class="shelf-count">1 книга в библиотеке</p>
       </div>
-      <span class="section-count">01 / 01</span>
     </div>
-
-    <div class="feature-book fade-in">
-      <div class="feature-book-cover">
-        <div class="cover-frame">
+    <div class="shelf-row">
+      <a href="book.html" class="shelf-card" data-testid="card-book-iznachalnyy">
+        <div class="shelf-cover">
           <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»" data-testid="img-book-cover-hero">
         </div>
-        <p class="cover-caption">Фуад Алиев · 2024</p>
-      </div>
-      <div class="feature-book-info">
-        <p class="tag">Философия · эссе</p>
-        <h3>Изначальный код Вселенной</h3>
-        <p class="subtitle">Бог, свобода и иллюзия религий</p>
-        <p class="desc">Что, если веками институты власти и традиционные религии скрывали от нас истинное лицо Создателя, подменяя Его бесконечную любовь парализующим страхом?</p>
-        <div class="meta-row">
-          <span>⏱ около 4 часов</span>
-          <span>👁 1 284 прочтения</span>
-          <span>12 глав</span>
-        </div>
-        <div class="actions-row">
-          <a href="book.html" class="btn btn-primary" data-testid="button-start-reading">📖 Начать читать →</a>
-          <a href="book.html#about-book" class="link-underline" data-testid="link-book-description">О книге</a>
-        </div>
+        <div class="shelf-stars" aria-hidden="true"><span class="filled">★★★★</span><span class="empty">★</span></div>
+        <p class="shelf-book-title">Изначальный код Вселенной</p>
+        <p class="shelf-author">Фуад Алиев</p>
+      </a>
+      <div class="shelf-card shelf-card-soon" data-testid="card-book-soon">
+        <div class="shelf-cover shelf-cover-soon">📄</div>
+        <p class="shelf-book-title muted-title">Новая рукопись</p>
+        <p class="shelf-author muted-author">Скоро</p>
       </div>
     </div>
   </section>
@@ -129,33 +119,6 @@
       <div class="about-text">
         <p>Фуад Алиев пишет о сложных вопросах простым и прямым языком: о свободе совести, личной ответственности и поиске смысла за пределами привычных формулировок.</p>
         <p>Эта библиотека объединяет его книги и заметки, чтобы читатель мог возвращаться к текстам в своём темпе — с экрана или с первой страницы.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-card" id="all-books-section">
-    <div class="site-container section">
-      <div class="shelf-head">
-        <div>
-          <h2 class="shelf-title-main">Все книги</h2>
-          <p class="shelf-count">1 книга в библиотеке</p>
-        </div>
-        <a href="#all-books-section" class="shelf-all-link">Все книги <span>›</span></a>
-      </div>
-      <div class="shelf-row">
-        <a href="book.html" class="shelf-card" data-testid="card-book-iznachalnyy">
-          <div class="shelf-cover">
-            <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»">
-          </div>
-          <div class="shelf-stars" aria-hidden="true"><span class="filled">★★★★</span><span class="empty">★</span></div>
-          <p class="shelf-book-title">Изначальный код Вселенной</p>
-          <p class="shelf-author">Фуад Алиев</p>
-        </a>
-        <div class="shelf-card shelf-card-soon" data-testid="card-book-soon">
-          <div class="shelf-cover shelf-cover-soon">📄</div>
-          <p class="shelf-book-title muted-title">Новая рукопись</p>
-          <p class="shelf-author muted-author">Скоро</p>
-        </div>
       </div>
     </div>
   </section>
