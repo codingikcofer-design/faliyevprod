@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Faliyev Prod — книги Фуада Алиева</title>
+<meta name="description" content="Личная библиотека Фуада Алиева. Читайте книги и статьи автора онлайн.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">Личная библиотека Ф. Алиева — читайте книги и статьи онлайн</div>
+
+<header class="site-header">
+  <div class="site-container header-row">
+    <a href="index.html" class="brand" data-testid="link-library-home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M20 9 L22 17.6 L30.8 18 L23.4 22.8 L26 31.2 L20 25.6 L14 31.2 L16.6 22.8 L9.2 18 L18 17.6 Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-text"><b>Faliyev Prod</b><small>книги Фуада Алиева</small></span>
+    </a>
+
+    <button class="search-trigger" id="search-trigger" data-testid="button-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      Книга или автор
+    </button>
+
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="index.html#books">Что выбрать</a>
+      <a href="index.html#books">Библиотека</a>
+      <a href="#about" id="nav-about">Об авторе</a>
+      <button id="admin-trigger" data-testid="button-nav-admin">Войти</button>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg id="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+
+  <div class="site-container tab-row" id="tab-row">
+    <button class="tab active" data-tab="books" data-testid="tab-books">Книги</button>
+    <button class="tab" data-tab="audio" data-testid="tab-audio">Аудиокниги</button>
+    <button class="tab" data-tab="payment" data-testid="tab-payment">Оплата</button>
+    <button class="tab" data-tab="free" data-testid="tab-free">Бесплатные тексты</button>
+    <button class="tab" data-tab="new" data-testid="tab-new">Новинки</button>
+    <button class="tab" data-tab="popular" data-testid="tab-popular">Популярное</button>
+    <button class="tab" data-tab="articles" data-testid="tab-articles">Статьи</button>
+  </div>
+
+  <div class="tab-note" id="tab-note" hidden></div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#books">Библиотека</a>
+    <a href="#about" id="nav-about-mobile">Об авторе</a>
+    <button id="search-trigger-mobile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Найти книгу</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="site-container hero-grid">
+      <div>
+        <p class="eyebrow">Личная библиотека Ф. Алиева</p>
+        <h1 class="hero-title">Книги о вере, свободе и человеке</h1>
+        <p class="hero-lead">Читайте тексты Фуада Алиева в удобном формате. Выберите книгу, познакомьтесь с идеями автора и начните чтение с первой страницы.</p>
+      </div>
+      <div class="hero-note">
+        «Изначальный код Вселенной» — первая опубликованная книга библиотеки.
+        <span>Открыта для чтения</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="books" class="site-container section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Избранная книга</p>
+        <h2 class="section-title">Начните с главной книги</h2>
+      </div>
+      <span class="section-count">01 / 01</span>
+    </div>
+
+    <div class="feature-book fade-in">
+      <div class="feature-book-cover">
+        <div class="cover-frame">
+          <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»" data-testid="img-book-cover-hero">
+        </div>
+        <p class="cover-caption">Фуад Алиев · 2024</p>
+      </div>
+      <div class="feature-book-info">
+        <p class="tag">Философия · эссе</p>
+        <h3>Изначальный код Вселенной</h3>
+        <p class="subtitle">Бог, свобода и иллюзия религий</p>
+        <p class="desc">Что, если веками институты власти и традиционные религии скрывали от нас истинное лицо Создателя, подменяя Его бесконечную любовь парализующим страхом?</p>
+        <div class="meta-row">
+          <span>⏱ около 4 часов</span>
+          <span>👁 1 284 прочтения</span>
+          <span>12 глав</span>
+        </div>
+        <div class="actions-row">
+          <a href="book.html" class="btn btn-primary" data-testid="button-start-reading">📖 Начать читать →</a>
+          <a href="#description" class="link-underline" data-testid="link-book-description">О книге</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="description" class="section-alt">
+    <div class="site-container section description-grid">
+      <div>
+        <p class="eyebrow">О книге</p>
+        <h2 class="section-title narrow">Разговор без готовых ответов</h2>
+      </div>
+      <div class="description-text">
+        <p>В этой глубокой и откровенной книге-манифесте общественный деятель Фуад Алиев предлагает читателю совершить смелый интеллектуальный прорыв — отделить величие Космического Архитектора от корыстных догм человеческих организаций.</p>
+        <p>Автор шаг за шагом раскрывает, как элиты прошлого «приватизировали» имя Творца для развязывания войн, контроля и обогащения. Объединяя выводы Канта, Гоббса, Эйнштейна и Франкла, книга ищет осознанный путь к исцелению духа через Любовь, а не страх.</p>
+        <p class="pull-quote">«Изначальный код Вселенной» — книга о праве начать всё заново.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="site-container section about-section">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">Об авторе</p>
+        <div class="about-person">
+          <img src="assets/author.jpg" alt="Фуад Алиев" data-testid="img-author">
+          <div>
+            <h2>Фуад Алиев</h2>
+            <p class="about-role">Автор и общественный деятель</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>Фуад Алиев пишет о сложных вопросах простым и прямым языком: о свободе совести, личной ответственности и поиске смысла за пределами привычных формулировок.</p>
+        <p>Эта библиотека объединяет его книги и заметки, чтобы читатель мог возвращаться к текстам в своём темпе — с экрана или с первой страницы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <div class="site-container section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Библиотека</p>
+          <h2 class="section-title">Книги Ф. Алиева</h2>
+        </div>
+        <span class="section-count">В процессе пополнения</span>
+      </div>
+      <div class="library-grid">
+        <a href="book.html" class="library-card" data-testid="card-book-iznachalnyy">
+          <img src="assets/cover.jpg" alt="">
+          <span>
+            <span class="library-tag">Доступна</span>
+            <span class="library-title">Изначальный код Вселенной</span>
+            <span class="library-link">Читать книгу →</span>
+          </span>
+        </a>
+        <div class="library-card library-card-soon">
+          <div class="library-icon">📄</div>
+          <div>
+            <p class="library-tag muted">Скоро</p>
+            <p class="library-title">Новая рукопись</p>
+            <p class="library-hint">Следите за обновлениями библиотеки</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== "Coming soon" sections for tabs: Аудиокниги / Бесплатные тексты / Новинки / Статьи ===== -->
+  <section id="audio-soon" class="site-container section soon-section" hidden>
+    <p class="eyebrow">Аудиокниги</p>
+    <div class="soon-card">
+      <div class="soon-icon">🎧</div>
+      <h3>Аудиоверсия в работе</h3>
+      <p>Мы готовим озвучку «Изначального кода Вселенной». Как только аудиокнига будет готова, она появится в этом разделе.</p>
+    </div>
+  </section>
+
+  <section id="free-soon" class="site-container section soon-section" hidden>
+    <p class="eyebrow">Бесплатные тексты</p>
+    <div class="soon-card">
+      <div class="soon-icon">✎</div>
+      <h3>Скоро будут бесплатные тексты</h3>
+      <p>Здесь появятся главы из книги и небольшие авторские тексты в свободном доступе — без регистрации и оплаты.</p>
+    </div>
+  </section>
+
+  <section id="new-soon" class="site-container section soon-section" hidden>
+    <p class="eyebrow">Новинки</p>
+    <div class="soon-card">
+      <div class="soon-icon">✦</div>
+      <h3>Скоро здесь появятся новые книги</h3>
+      <p>Новые издания Фуада Алиева будут опубликованы в этом разделе сразу после выхода.</p>
+    </div>
+  </section>
+
+  <section id="articles-soon" class="site-container section soon-section" hidden>
+    <p class="eyebrow">Статьи</p>
+    <div class="soon-card">
+      <div class="soon-icon">✧</div>
+      <h3>Скоро будут новые статьи</h3>
+      <p>Здесь будут выходить размышления Фуада Алиева на темы науки, философии и религии — в дополнение к книге.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-container footer-row">
+    <div>
+      <p class="footer-brand">Faliyev Prod</p>
+      <p class="footer-sub">Книги и тексты Фуада Алиева</p>
+    </div>
+    <p class="footer-copy">© 2024–<span id="year"></span> Фуад Алиев</p>
+  </div>
+</footer>
+
+<!-- ===== Modals (shared) ===== -->
+<div class="modal-overlay" id="payment-modal" hidden>
+  <div class="modal modal-payment" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close="payment-modal" aria-label="Закрыть оплату">✕</button>
+    <div id="payment-form">
+      <p class="eyebrow accent">Продолжение чтения</p>
+      <h2 class="modal-title">Поддержать автора и открыть книгу</h2>
+      <div class="price-row"><span>Доступ к полному тексту</span><b>290 ₽</b></div>
+      <p class="field-label">Выберите способ оплаты</p>
+      <div class="method-row">
+        <button class="method active" data-method="visa">VISA</button>
+        <button class="method" data-method="mastercard">Mastercard</button>
+        <button class="method" data-method="mir">МИР</button>
+      </div>
+      <div class="secure-note">
+        <span>💳</span>
+        <div>
+          <p>Безопасная оплата картой</p>
+          <p class="dim">Демонстрационное окно: в настоящем продукте здесь откроется защищённая форма <span id="method-name">Visa</span>.</p>
+        </div>
+      </div>
+      <button class="btn btn-accent btn-block" id="confirm-payment">Оплатить 290 ₽ →</button>
+      <p class="secured-line">🛡 Данные карты защищены</p>
+    </div>
+    <div id="payment-success" hidden>
+      <div class="success-body">
+        <div class="success-icon">✓</div>
+        <p class="eyebrow accent">Оплата прошла</p>
+        <h2 class="modal-title">Страницы открыты</h2>
+        <p class="dim">Спасибо за поддержку автора. Продолжение книги уже доступно в этом превью.</p>
+        <button class="btn btn-primary" id="close-payment-success">Вернуться к чтению</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="admin-modal" hidden>
+  <div class="modal modal-admin" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close="admin-modal" aria-label="Закрыть вход автора">✕</button>
+    <div id="admin-login">
+      <p class="eyebrow accent">Закрытый вход</p>
+      <h2 class="modal-title">Пространство автора</h2>
+      <p class="dim">Демонстрационный вход для управления библиотекой Фуада Алиева.</p>
+      <input class="text-input" placeholder="Логин автора" data-testid="input-admin-login">
+      <input class="text-input" type="password" placeholder="Пароль" data-testid="input-admin-password">
+      <button class="btn btn-primary btn-block" id="admin-login-btn">Войти в редактор →</button>
+    </div>
+    <div id="admin-editor" hidden>
+      <div class="editor-flag">✓ <span>Режим автора</span></div>
+      <h2 class="modal-title">Редактор библиотеки</h2>
+      <p class="dim">Здесь можно будет создавать книги, редактировать страницы, вставлять изображения и управлять публикациями.</p>
+      <div class="editor-grid">
+        <button class="editor-btn" id="admin-new-book">✎ Новая книга</button>
+        <button class="editor-btn" id="admin-pages">📄 Страницы</button>
+      </div>
+      <p class="editor-notice" id="editor-notice" hidden></p>
+      <button class="btn btn-primary btn-block" data-close="admin-modal">Вернуться в библиотеку</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay modal-overlay-top" id="search-modal" hidden>
+  <div class="modal modal-search" role="dialog" aria-modal="true">
+    <div class="search-row">
+      <span>🔍</span>
+      <input type="text" id="search-input" placeholder="Найти книгу или текст" autocomplete="off">
+      <button data-close="search-modal" aria-label="Закрыть поиск">✕</button>
+    </div>
+    <p class="search-status" id="search-status">Книга в библиотеке</p>
+    <a href="book.html" class="search-result" data-testid="button-search-result">
+      <div><p class="search-result-title">Изначальный код Вселенной</p><p class="search-result-sub">Фуад Алиев · философия</p></div>
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
