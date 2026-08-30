@@ -1,6 +1,106 @@
-// ============ i18n: язык книги (RU / EN / TR) ============
+// ============ i18n: язык всего сайта (RU / EN / TR) ============
+let currentLang = 'ru';
+
 const translations = {
   ru: {
+    // общие / шапка
+    topbarText: 'Личная библиотека Ф. Алиева — читайте книги и статьи онлайн',
+    brandTagline: 'книги Фуада Алиева',
+    searchTriggerText: 'Книга или автор',
+    langSwitchAria: 'Язык сайта',
+    navChoose: 'Что выбрать',
+    navLibrary: 'Библиотека',
+    navAboutLink: 'Об авторе',
+    navLogin: 'Войти',
+    menuAria: 'Меню',
+    navTabBooks: 'Книги',
+    navTabAudio: 'Аудиокниги',
+    navTabPayment: 'Оплата',
+    navTabFree: 'Бесплатные тексты',
+    navTabNew: 'Новинки',
+    navTabPopular: 'Популярное',
+    navTabArticles: 'Статьи',
+    mobileFindBook: 'Найти книгу',
+
+    // главная — hero
+    heroEyebrow: 'Личная библиотека Ф. Алиева',
+    heroTitle: 'Книги о вере, свободе и человеке',
+    heroLead: 'Читайте тексты Фуада Алиева в удобном формате. Выберите книгу, познакомьтесь с идеями автора и начните чтение с первой страницы.',
+
+    // главная — книги
+    allBooksTitle: 'Все книги',
+    comingManuscriptTitle: 'Новая рукопись',
+    soonLabel: 'Скоро',
+
+    // главная — об авторе
+    aboutLabel: 'Об авторе',
+    authorRole: 'Автор и общественный деятель',
+    aboutText1: 'Фуад Алиев пишет о сложных вопросах простым и прямым языком: о свободе совести, личной ответственности и поиске смысла за пределами привычных формулировок.',
+    aboutText2: 'Эта библиотека объединяет его книги и заметки, чтобы читатель мог возвращаться к текстам в своём темпе — с экрана или с первой страницы.',
+
+    // главная — «скоро»
+    audioSoonTitle: 'Аудиоверсия в работе',
+    audioSoonText: 'Мы готовим озвучку «Изначального кода Вселенной». Как только аудиокнига будет готова, она появится в этом разделе.',
+    freeSoonTitle: 'Скоро будут бесплатные тексты',
+    freeSoonText: 'Здесь появятся главы из книги и небольшие авторские тексты в свободном доступе — без регистрации и оплаты.',
+    newSoonTitle: 'Скоро здесь появятся новые книги',
+    newSoonText: 'Новые издания Фуада Алиева будут опубликованы в этом разделе сразу после выхода.',
+    articlesSoonTitle: 'Скоро будут новые статьи',
+    articlesSoonText: 'Здесь будут выходить размышления Фуада Алиева на темы науки, философии и религии — в дополнение к книге.',
+    soonMsgAudio: 'Аудиокниги — скоро появится озвучка книги.',
+    soonMsgFree: 'Бесплатные тексты — скоро будут бесплатные главы и заметки.',
+    soonMsgNew: 'Новинки — скоро здесь появятся новые книги.',
+    soonMsgArticles: 'Статьи — скоро будут новые статьи.',
+
+    // футер
+    footerSub: 'Книги и тексты Фуада Алиева',
+
+    // модалка оплаты
+    closePaymentAria: 'Закрыть оплату',
+    paymentModalTitle: 'Поддержать автора и открыть книгу',
+    fullAccessLabel: 'Доступ к полному тексту',
+    choosePaymentMethod: 'Выберите способ оплаты',
+    mirLabel: 'МИР',
+    secureCardPayment: 'Безопасная оплата картой',
+    demoPaymentText: 'Демонстрационное окно: в настоящем продукте здесь откроется защищённая форма',
+    payButtonText: 'Оплатить 290 ₽ →',
+    cardDataProtected: '🛡 Данные карты защищены',
+    paymentSuccessEyebrow: 'Оплата прошла',
+    pagesUnlockedTitle: 'Страницы открыты',
+    thankYouText: 'Спасибо за поддержку автора. Продолжение книги уже доступно в этом превью.',
+    backToReadingBtn: 'Вернуться к чтению',
+
+    // модалка входа автора
+    closeAdminAria: 'Закрыть вход автора',
+    privateLoginEyebrow: 'Закрытый вход',
+    authorSpaceTitle: 'Пространство автора',
+    demoLoginText: 'Демонстрационный вход для управления библиотекой Фуада Алиева.',
+    authorLoginPlaceholder: 'Логин автора',
+    passwordPlaceholder: 'Пароль',
+    enterEditorBtn: 'Войти в редактор →',
+    authorModeLabel: 'Режим автора',
+    libraryEditorTitle: 'Редактор библиотеки',
+    editorDescText: 'Здесь можно будет создавать книги, редактировать страницы, вставлять изображения и управлять публикациями.',
+    newBookBtn: '✎ Новая книга',
+    pagesBtn: '📄 Страницы',
+    backToLibraryBtn: 'Вернуться в библиотеку',
+    draftReadyText: 'Черновик новой книги готов к созданию.',
+    pageEditorComingText: 'Редактор страниц будет доступен после подключения хранилища.',
+
+    // модалка поиска
+    searchPlaceholder: 'Найти книгу или текст',
+    closeSearchAria: 'Закрыть поиск',
+    bookInLibraryStatus: 'Книга в библиотеке',
+    oneResultText: '1 результат',
+    noResultsText: 'Ничего не найдено',
+
+    // заголовки страниц и мета-описания
+    pageTitleIndex: 'Faliyev Prod — книги Фуада Алиева',
+    metaDescIndex: 'Личная библиотека Фуада Алиева. Читайте книги и статьи автора онлайн.',
+    metaDescBook: 'Читать книгу «Изначальный код Вселенной» Фуада Алиева онлайн.',
+
+    // страница книги
+    pageTitleBook: 'Изначальный код Вселенной — читать книгу | Faliyev Prod',
     bookTitle: 'Изначальный код Вселенной',
     authorName: 'Фуад Алиев',
     subtitle: 'Бог, свобода и иллюзия религий',
@@ -30,8 +130,116 @@ const translations = {
     aboutBookTitleShort: 'Любовь вместо страха.',
     aboutBookDesc: 'Манифест о вере, свободе и праве начать заново.',
     detailsLink: 'Детали книги →',
+    backToLibraryLink: '← Библиотека',
+    saveBookAria: 'Сохранить книгу',
+    continueBtn: 'Продолжить →',
+    readersDialogEyebrow: 'Диалог читателей',
+    commentsTitle: 'Комментарии',
+    commentPlaceholder: 'Оставьте мысль после прочтения…',
+    commentNameVisible: 'Ваше имя будет видно рядом с комментарием',
+    publishBtn: 'Опубликовать →',
+    commentEmptyText: 'Пока нет комментариев — станьте первым, кто поделится мыслью.',
+    openTocAria: 'Открыть содержание',
+    progressSavedText: '🛡 Прогресс сохраняется на этом устройстве',
+
+    // динамический JS-контент
+    copyTopDefault: '📋 Цитата',
+    copyTopCopied: 'Скопировано',
+    copyInlineDefault: '📋 Скопировать цитату',
+    copyInlineCopied: 'Цитата скопирована',
+    copiedQuoteText: 'Наука и книги не отдаляют человека от Бога, а приближают к Нему.',
+    youInitials: 'ВЫ',
+    yourCommentLabel: 'Ваш комментарий',
+    justNowLabel: 'только что',
   },
+
   en: {
+    topbarText: "Fuad Aliyev's personal library — read books and articles online",
+    brandTagline: 'books by Fuad Aliyev',
+    searchTriggerText: 'Book or author',
+    langSwitchAria: 'Site language',
+    navChoose: 'What to choose',
+    navLibrary: 'Library',
+    navAboutLink: 'About the author',
+    navLogin: 'Log in',
+    menuAria: 'Menu',
+    navTabBooks: 'Books',
+    navTabAudio: 'Audiobooks',
+    navTabPayment: 'Payment',
+    navTabFree: 'Free texts',
+    navTabNew: 'New releases',
+    navTabPopular: 'Popular',
+    navTabArticles: 'Articles',
+    mobileFindBook: 'Find a book',
+
+    heroEyebrow: "Fuad Aliyev's personal library",
+    heroTitle: 'Books about faith, freedom, and humanity',
+    heroLead: "Read Fuad Aliyev's texts in a convenient format. Choose a book, get to know the author's ideas, and start reading from the first page.",
+
+    allBooksTitle: 'All books',
+    comingManuscriptTitle: 'New manuscript',
+    soonLabel: 'Coming soon',
+
+    aboutLabel: 'About the author',
+    authorRole: 'Author and public figure',
+    aboutText1: 'Fuad Aliyev writes about complex questions in simple, direct language: freedom of conscience, personal responsibility, and the search for meaning beyond familiar formulas.',
+    aboutText2: 'This library brings together his books and notes so readers can return to the texts at their own pace — on screen or from the very first page.',
+
+    audioSoonTitle: 'Audio edition in progress',
+    audioSoonText: 'We are preparing the narration of "The Original Code of the Universe." As soon as the audiobook is ready, it will appear in this section.',
+    freeSoonTitle: 'Free texts coming soon',
+    freeSoonText: 'Chapters from the book and short original texts will appear here, freely available — no registration or payment required.',
+    newSoonTitle: 'New books will appear here soon',
+    newSoonText: "Fuad Aliyev's new editions will be published in this section as soon as they are released.",
+    articlesSoonTitle: 'New articles coming soon',
+    articlesSoonText: "Fuad Aliyev's reflections on science, philosophy, and religion will be published here, alongside the book.",
+    soonMsgAudio: 'Audiobooks — the narration of the book will be available soon.',
+    soonMsgFree: 'Free texts — free chapters and notes are coming soon.',
+    soonMsgNew: 'New releases — new books will appear here soon.',
+    soonMsgArticles: 'Articles — new articles are coming soon.',
+
+    footerSub: 'Books and texts by Fuad Aliyev',
+
+    closePaymentAria: 'Close payment',
+    paymentModalTitle: 'Support the author and unlock the book',
+    fullAccessLabel: 'Access to the full text',
+    choosePaymentMethod: 'Choose a payment method',
+    mirLabel: 'Mir',
+    secureCardPayment: 'Secure card payment',
+    demoPaymentText: 'Demo window: in the real product, a secure form would open here for',
+    payButtonText: 'Pay 290 ₽ →',
+    cardDataProtected: '🛡 Card data is protected',
+    paymentSuccessEyebrow: 'Payment successful',
+    pagesUnlockedTitle: 'Pages unlocked',
+    thankYouText: "Thank you for supporting the author. The rest of the book is now available in this preview.",
+    backToReadingBtn: 'Back to reading',
+
+    closeAdminAria: 'Close author login',
+    privateLoginEyebrow: 'Private login',
+    authorSpaceTitle: 'Author space',
+    demoLoginText: "A demo login for managing Fuad Aliyev's library.",
+    authorLoginPlaceholder: 'Author login',
+    passwordPlaceholder: 'Password',
+    enterEditorBtn: 'Enter the editor →',
+    authorModeLabel: 'Author mode',
+    libraryEditorTitle: 'Library editor',
+    editorDescText: 'Here you will be able to create books, edit pages, insert images, and manage publications.',
+    newBookBtn: '✎ New book',
+    pagesBtn: '📄 Pages',
+    backToLibraryBtn: 'Back to the library',
+    draftReadyText: 'A draft of the new book is ready to be created.',
+    pageEditorComingText: 'The page editor will be available once storage is connected.',
+
+    searchPlaceholder: 'Find a book or text',
+    closeSearchAria: 'Close search',
+    bookInLibraryStatus: 'Book in the library',
+    oneResultText: '1 result',
+    noResultsText: 'Nothing found',
+
+    pageTitleIndex: 'Faliyev Prod — Books by Fuad Aliyev',
+    metaDescIndex: "Fuad Aliyev's personal library. Read the author's books and articles online.",
+    metaDescBook: 'Read "The Original Code of the Universe" by Fuad Aliyev online.',
+    pageTitleBook: 'The Original Code of the Universe — read the book | Faliyev Prod',
     bookTitle: 'The Original Code of the Universe',
     authorName: 'Fuad Aliyev',
     subtitle: 'God, Freedom, and the Illusion of Religions',
@@ -61,8 +269,115 @@ const translations = {
     aboutBookTitleShort: 'Love instead of fear.',
     aboutBookDesc: 'A manifesto about faith, freedom, and the right to start again.',
     detailsLink: 'Book details →',
+    backToLibraryLink: '← Library',
+    saveBookAria: 'Save the book',
+    continueBtn: 'Continue →',
+    readersDialogEyebrow: "Readers' dialogue",
+    commentsTitle: 'Comments',
+    commentPlaceholder: 'Leave a thought after reading…',
+    commentNameVisible: 'Your name will be shown next to the comment',
+    publishBtn: 'Publish →',
+    commentEmptyText: 'No comments yet — be the first to share a thought.',
+    openTocAria: 'Open table of contents',
+    progressSavedText: '🛡 Progress is saved on this device',
+
+    copyTopDefault: '📋 Quote',
+    copyTopCopied: 'Copied',
+    copyInlineDefault: '📋 Copy quote',
+    copyInlineCopied: 'Quote copied',
+    copiedQuoteText: 'Science and books do not distance a person from God — they bring them closer to Him.',
+    youInitials: 'YOU',
+    yourCommentLabel: 'Your comment',
+    justNowLabel: 'just now',
   },
+
   tr: {
+    topbarText: "F. Aliyev'in kişisel kütüphanesi — kitapları ve makaleleri çevrimiçi okuyun",
+    brandTagline: "Fuad Aliyev'in kitapları",
+    searchTriggerText: 'Kitap veya yazar',
+    langSwitchAria: 'Site dili',
+    navChoose: 'Ne seçmeli',
+    navLibrary: 'Kütüphane',
+    navAboutLink: 'Yazar hakkında',
+    navLogin: 'Giriş yap',
+    menuAria: 'Menü',
+    navTabBooks: 'Kitaplar',
+    navTabAudio: 'Sesli kitaplar',
+    navTabPayment: 'Ödeme',
+    navTabFree: 'Ücretsiz metinler',
+    navTabNew: 'Yeni çıkanlar',
+    navTabPopular: 'Popüler',
+    navTabArticles: 'Makaleler',
+    mobileFindBook: 'Kitap bul',
+
+    heroEyebrow: "F. Aliyev'in kişisel kütüphanesi",
+    heroTitle: 'İnanç, özgürlük ve insan üzerine kitaplar',
+    heroLead: "Fuad Aliyev'in metinlerini rahat bir formatta okuyun. Bir kitap seçin, yazarın fikirlerini tanıyın ve okumaya ilk sayfadan başlayın.",
+
+    allBooksTitle: 'Tüm kitaplar',
+    comingManuscriptTitle: 'Yeni el yazması',
+    soonLabel: 'Yakında',
+
+    aboutLabel: 'Yazar hakkında',
+    authorRole: 'Yazar ve kamuoyu figürü',
+    aboutText1: 'Fuad Aliyev karmaşık konular hakkında sade ve doğrudan bir dille yazıyor: vicdan özgürlüğü, kişisel sorumluluk ve alışılmış kalıpların ötesinde anlam arayışı.',
+    aboutText2: 'Bu kütüphane, okurun metinlere kendi hızında dönebilmesi için yazarın kitaplarını ve notlarını bir araya getiriyor — ekrandan ya da ilk sayfadan.',
+
+    audioSoonTitle: 'Sesli sürüm hazırlanıyor',
+    audioSoonText: '"Evrenin Özgün Kodu" için seslendirme hazırlıyoruz. Sesli kitap hazır olduğunda bu bölümde yayınlanacak.',
+    freeSoonTitle: 'Yakında ücretsiz metinler',
+    freeSoonText: 'Burada kitaptan bölümler ve kısa yazar metinleri, kayıt veya ödeme gerekmeden ücretsiz olarak yer alacak.',
+    newSoonTitle: 'Yakında burada yeni kitaplar olacak',
+    newSoonText: "Fuad Aliyev'in yeni baskıları yayımlandıktan hemen sonra bu bölümde yer alacak.",
+    articlesSoonTitle: 'Yakında yeni makaleler',
+    articlesSoonText: "Fuad Aliyev'in bilim, felsefe ve din üzerine düşünceleri, kitaba ek olarak burada yayınlanacak.",
+    soonMsgAudio: 'Sesli kitaplar — kitabın seslendirmesi yakında burada.',
+    soonMsgFree: 'Ücretsiz metinler — yakında ücretsiz bölümler ve notlar.',
+    soonMsgNew: 'Yeni çıkanlar — yakında burada yeni kitaplar olacak.',
+    soonMsgArticles: 'Makaleler — yakında yeni makaleler yayınlanacak.',
+
+    footerSub: "Fuad Aliyev'in kitapları ve metinleri",
+
+    closePaymentAria: 'Ödemeyi kapat',
+    paymentModalTitle: 'Yazarı destekleyin ve kitabın kilidini açın',
+    fullAccessLabel: 'Tam metne erişim',
+    choosePaymentMethod: 'Ödeme yöntemini seçin',
+    mirLabel: 'Mir',
+    secureCardPayment: 'Güvenli kart ödemesi',
+    demoPaymentText: 'Demo penceresi: gerçek üründe burada güvenli bir form açılır —',
+    payButtonText: '290 ₽ öde →',
+    cardDataProtected: '🛡 Kart verileri korunmaktadır',
+    paymentSuccessEyebrow: 'Ödeme başarılı',
+    pagesUnlockedTitle: 'Sayfaların kilidi açıldı',
+    thankYouText: 'Yazarı desteklediğiniz için teşekkürler. Kitabın devamı artık bu önizlemede mevcut.',
+    backToReadingBtn: 'Okumaya dön',
+
+    closeAdminAria: 'Yazar girişini kapat',
+    privateLoginEyebrow: 'Özel giriş',
+    authorSpaceTitle: 'Yazar alanı',
+    demoLoginText: "Fuad Aliyev'in kütüphanesini yönetmek için demo giriş.",
+    authorLoginPlaceholder: 'Yazar kullanıcı adı',
+    passwordPlaceholder: 'Şifre',
+    enterEditorBtn: 'Editöre gir →',
+    authorModeLabel: 'Yazar modu',
+    libraryEditorTitle: 'Kütüphane editörü',
+    editorDescText: 'Burada kitap oluşturabilecek, sayfaları düzenleyebilecek, görsel ekleyebilecek ve yayınları yönetebileceksiniz.',
+    newBookBtn: '✎ Yeni kitap',
+    pagesBtn: '📄 Sayfalar',
+    backToLibraryBtn: 'Kütüphaneye dön',
+    draftReadyText: 'Yeni kitabın taslağı oluşturulmaya hazır.',
+    pageEditorComingText: 'Sayfa editörü, depolama bağlandıktan sonra kullanılabilir olacak.',
+
+    searchPlaceholder: 'Kitap veya metin ara',
+    closeSearchAria: 'Aramayı kapat',
+    bookInLibraryStatus: 'Kütüphanedeki kitap',
+    oneResultText: '1 sonuç',
+    noResultsText: 'Sonuç bulunamadı',
+
+    pageTitleIndex: "Faliyev Prod — Fuad Aliyev'in kitapları",
+    metaDescIndex: "Fuad Aliyev'in kişisel kütüphanesi. Yazarın kitaplarını ve makalelerini çevrimiçi okuyun.",
+    metaDescBook: "\"Evrenin Özgün Kodu\" kitabını Fuad Aliyev'den çevrimiçi okuyun.",
+    pageTitleBook: 'Evrenin Özgün Kodu — kitabı oku | Faliyev Prod',
     bookTitle: 'Evrenin Özgün Kodu',
     authorName: 'Fuad Aliyev',
     subtitle: 'Tanrı, Özgürlük ve Dinlerin Yanılsaması',
@@ -92,6 +407,26 @@ const translations = {
     aboutBookTitleShort: 'Korku yerine sevgi.',
     aboutBookDesc: 'İnanç, özgürlük ve yeniden başlama hakkı üzerine bir manifesto.',
     detailsLink: 'Kitap detayları →',
+    backToLibraryLink: '← Kütüphane',
+    saveBookAria: 'Kitabı kaydet',
+    continueBtn: 'Devam et →',
+    readersDialogEyebrow: 'Okuyucu diyaloğu',
+    commentsTitle: 'Yorumlar',
+    commentPlaceholder: 'Okuduktan sonra bir düşünce bırakın…',
+    commentNameVisible: 'Adınız yorumun yanında görünecek',
+    publishBtn: 'Yayınla →',
+    commentEmptyText: 'Henüz yorum yok — düşüncesini paylaşan ilk kişi olun.',
+    openTocAria: 'İçindekileri aç',
+    progressSavedText: '🛡 İlerleme bu cihazda kaydedilir',
+
+    copyTopDefault: '📋 Alıntı',
+    copyTopCopied: 'Kopyalandı',
+    copyInlineDefault: '📋 Alıntıyı kopyala',
+    copyInlineCopied: 'Alıntı kopyalandı',
+    copiedQuoteText: "Bilim ve kitaplar insanı Tanrı'dan uzaklaştırmaz, O'na yaklaştırır.",
+    youInitials: 'SİZ',
+    yourCommentLabel: 'Yorumunuz',
+    justNowLabel: 'az önce',
   },
 };
 
@@ -104,16 +439,50 @@ const bookCovers = {
 function applyLanguage(lang) {
   const dict = translations[lang] ? lang : 'ru';
   const t = translations[dict];
+  currentLang = dict;
+
+  document.documentElement.setAttribute('lang', dict);
+
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) el.textContent = t[key];
   });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.dataset.i18nPlaceholder;
+    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
+    const key = el.dataset.i18nAriaLabel;
+    if (t[key] !== undefined) el.setAttribute('aria-label', t[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-content]').forEach((el) => {
+    const key = el.dataset.i18nContent;
+    if (t[key] !== undefined) el.setAttribute('content', t[key]);
+  });
+
   document.querySelectorAll('.book-cover-img').forEach((img) => {
     img.src = bookCovers[dict] || bookCovers.ru;
   });
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === dict);
   });
+
+  // сброс переходных надписей на кнопках копирования цитаты к переведённым значениям по умолчанию
+  const copyTopLabel = document.getElementById('copy-top-label');
+  if (copyTopLabel) copyTopLabel.textContent = t.copyTopDefault;
+  const copyInlineLabel = document.getElementById('copy-inline-label');
+  if (copyInlineLabel) copyInlineLabel.textContent = t.copyInlineDefault;
+
+  // строка статуса поиска (если поле пустое)
+  const searchInputEl = document.getElementById('search-input');
+  const searchStatusEl = document.getElementById('search-status');
+  if (searchStatusEl && (!searchInputEl || !searchInputEl.value.trim())) {
+    searchStatusEl.textContent = t.bookInLibraryStatus;
+  }
+
   localStorage.setItem('bookLang', dict);
 }
 
@@ -181,14 +550,14 @@ const adminNewBook = document.getElementById('admin-new-book');
 if (adminNewBook) {
   adminNewBook.addEventListener('click', () => {
     editorNotice.hidden = false;
-    editorNotice.textContent = 'Черновик новой книги готов к созданию.';
+    editorNotice.textContent = translations[currentLang].draftReadyText;
   });
 }
 const adminPages = document.getElementById('admin-pages');
 if (adminPages) {
   adminPages.addEventListener('click', () => {
     editorNotice.hidden = false;
-    editorNotice.textContent = 'Редактор страниц будет доступен после подключения хранилища.';
+    editorNotice.textContent = translations[currentLang].pageEditorComingText;
   });
 }
 
@@ -204,15 +573,16 @@ const searchResult = document.querySelector('.search-result');
 if (searchInput && searchResult) {
   const searchable = () => (searchResult.textContent || '').toLowerCase();
   searchInput.addEventListener('input', () => {
+    const t = translations[currentLang];
     const query = searchInput.value.trim().toLowerCase();
     if (!query) {
       searchResult.hidden = false;
-      searchStatus.textContent = 'Книга в библиотеке';
+      searchStatus.textContent = t.bookInLibraryStatus;
       return;
     }
     const match = searchable().includes(query);
     searchResult.hidden = !match;
-    searchStatus.textContent = match ? '1 результат' : 'Ничего не найдено';
+    searchStatus.textContent = match ? t.oneResultText : t.noResultsText;
   });
 }
 
@@ -225,7 +595,8 @@ document.querySelectorAll('.method').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.method').forEach(m => m.classList.remove('active'));
     btn.classList.add('active');
-    const labels = { visa: 'Visa', mastercard: 'Mastercard', mir: 'МИР' };
+    const t = translations[currentLang];
+    const labels = { visa: 'Visa', mastercard: 'Mastercard', mir: t.mirLabel };
     const nameEl = document.getElementById('method-name');
     if (nameEl) nameEl.textContent = labels[btn.dataset.method];
   });
@@ -274,12 +645,7 @@ if (sessionStorage.getItem('highlight-about') && document.querySelector('.about-
 }
 
 // ============ Tabs: Книги / Аудиокниги / Оплата / Бесплатные тексты / Новинки / Популярное / Статьи ============
-const soonMessages = {
-  audio: 'Аудиокниги — скоро появится озвучка книги.',
-  free: 'Бесплатные тексты — скоро будут бесплатные главы и заметки.',
-  new: 'Новинки — скоро здесь появятся новые книги.',
-  articles: 'Статьи — скоро будут новые статьи.',
-};
+const soonMessageKeys = { audio: 'soonMsgAudio', free: 'soonMsgFree', new: 'soonMsgNew', articles: 'soonMsgArticles' };
 const soonSectionIds = { audio: 'audio-soon', free: 'free-soon', new: 'new-soon', articles: 'articles-soon' };
 
 const tabNote = document.getElementById('tab-note');
@@ -327,7 +693,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     if (tabNote) {
       clearTimeout(tabNoteTimeout);
       tabNote.hidden = false;
-      tabNote.innerHTML = `<b>${soonMessages[key]}</b>`;
+      tabNote.innerHTML = `<b>${translations[currentLang][soonMessageKeys[key]]}</b>`;
       tabNoteTimeout = window.setTimeout(() => { tabNote.hidden = true; }, 4000);
     }
   });
@@ -339,22 +705,23 @@ if (saveToggle) {
   saveToggle.addEventListener('click', () => saveToggle.classList.toggle('active'));
 }
 
-function copyQuote(labelEl, defaultText, copiedText) {
-  const quote = 'Наука и книги не отдаляют человека от Бога, а приближают к Нему.';
+function copyQuote(labelEl, defaultKey, copiedKey) {
+  const t = translations[currentLang];
+  const quote = t.copiedQuoteText;
   if (navigator.clipboard) navigator.clipboard.writeText(quote).catch(() => {});
-  labelEl.textContent = copiedText;
-  window.setTimeout(() => { labelEl.textContent = defaultText; }, 1800);
+  labelEl.textContent = t[copiedKey];
+  window.setTimeout(() => { labelEl.textContent = translations[currentLang][defaultKey]; }, 1800);
 }
 const copyTopBtn = document.getElementById('copy-quote-top');
 if (copyTopBtn) {
   copyTopBtn.addEventListener('click', () => {
-    copyQuote(document.getElementById('copy-top-label'), '📋 Цитата', 'Скопировано');
+    copyQuote(document.getElementById('copy-top-label'), 'copyTopDefault', 'copyTopCopied');
   });
 }
 const copyInlineBtn = document.getElementById('copy-quote-inline');
 if (copyInlineBtn) {
   copyInlineBtn.addEventListener('click', () => {
-    copyQuote(document.getElementById('copy-inline-label'), '📋 Скопировать цитату', 'Цитата скопирована');
+    copyQuote(document.getElementById('copy-inline-label'), 'copyInlineDefault', 'copyInlineCopied');
   });
 }
 
@@ -390,10 +757,11 @@ if (submitComment) {
   submitComment.addEventListener('click', () => {
     const text = commentInput.value.trim();
     if (!text) return;
+    const t = translations[currentLang];
     if (commentEmpty) commentEmpty.hidden = true;
     const item = document.createElement('div');
     item.className = 'comment';
-    item.innerHTML = `<span class="comment-initials">ВЫ</span><div><div class="comment-meta"><b>Ваш комментарий</b><span>только что</span></div><p></p></div>`;
+    item.innerHTML = `<span class="comment-initials">${t.youInitials}</span><div><div class="comment-meta"><b>${t.yourCommentLabel}</b><span>${t.justNowLabel}</span></div><p></p></div>`;
     item.querySelector('p').textContent = text;
     commentList.prepend(item);
     commentTotal += 1;

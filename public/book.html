@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>Изначальный код Вселенной — читать книгу | Faliyev Prod</title>
-<meta name="description" content="Читать книгу «Изначальный код Вселенной» Фуада Алиева онлайн.">
+<title data-i18n="pageTitleBook">Изначальный код Вселенной — читать книгу | Faliyev Prod</title>
+<meta name="description" content="Читать книгу «Изначальный код Вселенной» Фуада Алиева онлайн." data-i18n-content="metaDescBook">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="topbar">Личная библиотека Ф. Алиева — читайте книги и статьи онлайн</div>
+<div class="topbar" data-i18n="topbarText">Личная библиотека Ф. Алиева — читайте книги и статьи онлайн</div>
 
 <header class="site-header">
   <div class="site-container header-row">
@@ -24,50 +24,50 @@
           <path d="M20 9 L22 17.6 L30.8 18 L23.4 22.8 L26 31.2 L20 25.6 L14 31.2 L16.6 22.8 L9.2 18 L18 17.6 Z" fill="currentColor"/>
         </svg>
       </span>
-      <span class="brand-text"><b>Faliyev Prod</b><small>книги Фуада Алиева</small></span>
+      <span class="brand-text"><b>Faliyev Prod</b><small data-i18n="brandTagline">книги Фуада Алиева</small></span>
     </a>
 
     <button class="search-trigger" id="search-trigger" data-testid="button-search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      Книга или автор
+      <span data-i18n="searchTriggerText">Книга или автор</span>
     </button>
 
-    <div class="lang-switch" id="lang-switch" role="group" aria-label="Язык книги">
+    <div class="lang-switch" id="lang-switch" role="group" aria-label="Язык сайта" data-i18n-aria-label="langSwitchAria">
       <button class="lang-btn" data-lang="ru" data-testid="button-lang-ru">RU</button>
       <button class="lang-btn" data-lang="en" data-testid="button-lang-en">EN</button>
       <button class="lang-btn" data-lang="tr" data-testid="button-lang-tr">TR</button>
     </div>
 
     <nav class="main-nav" aria-label="Основная навигация">
-      <a href="index.html#books">Что выбрать</a>
-      <a href="index.html#books">Библиотека</a>
-      <a href="index.html#about" id="nav-about">Об авторе</a>
-      <button id="admin-trigger" data-testid="button-nav-admin">Войти</button>
+      <a href="index.html#books" data-i18n="navChoose">Что выбрать</a>
+      <a href="index.html#books" data-i18n="navLibrary">Библиотека</a>
+      <a href="index.html#about" id="nav-about" data-i18n="navAboutLink">Об авторе</a>
+      <button id="admin-trigger" data-testid="button-nav-admin" data-i18n="navLogin">Войти</button>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+    <button class="burger" id="burger" aria-label="Меню" data-i18n-aria-label="menuAria" aria-expanded="false">
       <svg id="icon-menu" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       <svg id="icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
     </button>
   </div>
 
   <div class="site-container tab-row" id="tab-row">
-    <button class="tab" data-tab="books" data-href="index.html#books" data-testid="tab-books">Книги</button>
-    <button class="tab" data-tab="audio" data-testid="tab-audio">Аудиокниги</button>
-    <button class="tab" data-tab="payment" data-testid="tab-payment">Оплата</button>
-    <button class="tab" data-tab="free" data-testid="tab-free">Бесплатные тексты</button>
-    <button class="tab" data-tab="new" data-testid="tab-new">Новинки</button>
-    <button class="tab" data-tab="popular" data-href="index.html#books" data-testid="tab-popular">Популярное</button>
-    <button class="tab" data-tab="articles" data-testid="tab-articles">Статьи</button>
+    <button class="tab" data-tab="books" data-href="index.html#books" data-testid="tab-books" data-i18n="navTabBooks">Книги</button>
+    <button class="tab" data-tab="audio" data-testid="tab-audio" data-i18n="navTabAudio">Аудиокниги</button>
+    <button class="tab" data-tab="payment" data-testid="tab-payment" data-i18n="navTabPayment">Оплата</button>
+    <button class="tab" data-tab="free" data-testid="tab-free" data-i18n="navTabFree">Бесплатные тексты</button>
+    <button class="tab" data-tab="new" data-testid="tab-new" data-i18n="navTabNew">Новинки</button>
+    <button class="tab" data-tab="popular" data-href="index.html#books" data-testid="tab-popular" data-i18n="navTabPopular">Популярное</button>
+    <button class="tab" data-tab="articles" data-testid="tab-articles" data-i18n="navTabArticles">Статьи</button>
   </div>
 
   <div class="tab-note" id="tab-note" hidden></div>
 
   <div class="mobile-menu" id="mobile-menu">
-    <a href="index.html#books">Библиотека</a>
-    <a href="index.html#about">Об авторе</a>
-    <button id="search-trigger-mobile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Найти книгу</button>
-    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Язык книги">
+    <a href="index.html#books" data-i18n="navLibrary">Библиотека</a>
+    <a href="index.html#about" data-i18n="navAboutLink">Об авторе</a>
+    <button id="search-trigger-mobile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> <span data-i18n="mobileFindBook">Найти книгу</span></button>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Язык сайта" data-i18n-aria-label="langSwitchAria">
       <button class="lang-btn" data-lang="ru">RU</button>
       <button class="lang-btn" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="tr">TR</button>
@@ -77,13 +77,13 @@
 
 <div class="reader-bar">
   <div class="site-container reader-bar-row">
-    <a href="index.html" class="reader-back">← Библиотека</a>
+    <a href="index.html" class="reader-back" data-i18n="backToLibraryLink">← Библиотека</a>
     <span class="reader-sep"></span>
     <span class="reader-title-inline" data-i18n="bookTitle">Изначальный код Вселенной</span>
     <div class="reader-bar-actions">
-      <button id="save-toggle" class="icon-btn" aria-label="Сохранить книгу" data-testid="button-save-book">🔖</button>
-      <button id="copy-quote-top" class="text-btn"><span id="copy-top-label">📋 Цитата</span></button>
-      <button id="continue-top" class="btn btn-primary btn-small" data-testid="button-continue-top">Продолжить →</button>
+      <button id="save-toggle" class="icon-btn" aria-label="Сохранить книгу" data-i18n-aria-label="saveBookAria" data-testid="button-save-book">🔖</button>
+      <button id="copy-quote-top" class="text-btn"><span id="copy-top-label" data-i18n="copyTopDefault">📋 Цитата</span></button>
+      <button id="continue-top" class="btn btn-primary btn-small" data-testid="button-continue-top" data-i18n="continueBtn">Продолжить →</button>
     </div>
   </div>
   <div class="progress-track"><div class="progress-fill"></div></div>
@@ -106,7 +106,7 @@
       <p data-i18n="body1">В этой глубокой и откровенной книге-манифесте общественный деятель Фуад Алиев предлагает читателю совершить смелый интеллектуальный прорыв — отделить величие Космического Архитектора от корыстных догм человеческих организаций. Автор шаг за шагом раскрывает, как элиты прошлого «приватизировали» имя Творца для развязывания войн, контроля и обогащения.</p>
       <blockquote>
         <span data-i18n="quote">«Эта книга — не против веры. Она — за истинные отношения с Творцом».</span>
-        <button id="copy-quote-inline" class="text-btn small"><span id="copy-inline-label">📋 Скопировать цитату</span></button>
+        <button id="copy-quote-inline" class="text-btn small"><span id="copy-inline-label" data-i18n="copyInlineDefault">📋 Скопировать цитату</span></button>
       </blockquote>
       <p data-i18n="body2">Объединяя выводы великих мыслителей от Канта и Гоббса до Эйнштейна и Франкла, автор доказывает, что наука и книги не отдаляют человека от Бога, а приближают к Нему. Вы узнаете, как работает «изначальный код Вселенной», почему глобальные катаклизмы — это божественный сигнал тревоги, и как в детстве зарождается первая невидимая трещина души, мешающая нам радоваться жизни.</p>
     </div>
@@ -124,20 +124,20 @@
     <section class="comments-section" id="comments">
       <div class="comments-head">
         <div>
-          <p class="eyebrow accent">Диалог читателей</p>
-          <h2>Комментарии <span id="comment-count">(0)</span></h2>
+          <p class="eyebrow accent" data-i18n="readersDialogEyebrow">Диалог читателей</p>
+          <h2><span data-i18n="commentsTitle">Комментарии</span> <span id="comment-count">(0)</span></h2>
         </div>
         <span>💬</span>
       </div>
       <div class="comment-form">
-        <textarea id="comment-input" placeholder="Оставьте мысль после прочтения…" data-testid="input-comment"></textarea>
+        <textarea id="comment-input" placeholder="Оставьте мысль после прочтения…" data-i18n-placeholder="commentPlaceholder" data-testid="input-comment"></textarea>
         <div class="comment-form-row">
-          <span>Ваше имя будет видно рядом с комментарием</span>
-          <button class="btn btn-primary btn-small" id="submit-comment" data-testid="button-submit-comment">Опубликовать →</button>
+          <span data-i18n="commentNameVisible">Ваше имя будет видно рядом с комментарием</span>
+          <button class="btn btn-primary btn-small" id="submit-comment" data-testid="button-submit-comment" data-i18n="publishBtn">Опубликовать →</button>
         </div>
       </div>
       <div class="comment-list" id="comment-list">
-        <p class="comment-empty" id="comment-empty">Пока нет комментариев — станьте первым, кто поделится мыслью.</p>
+        <p class="comment-empty" id="comment-empty" data-i18n="commentEmptyText">Пока нет комментариев — станьте первым, кто поделится мыслью.</p>
       </div>
     </section>
   </article>
@@ -146,7 +146,7 @@
     <div class="sidebar-card">
       <div class="sidebar-toc-head">
         <span class="eyebrow accent" style="margin:0" data-i18n="tocEyebrowLabel">Содержание</span>
-        <button id="toc-toggle" aria-label="Открыть содержание" data-testid="button-chapters">▾</button>
+        <button id="toc-toggle" aria-label="Открыть содержание" data-i18n-aria-label="openTocAria" data-testid="button-chapters">▾</button>
       </div>
       <button class="toc-current" id="toc-selector" data-testid="button-chapter-selector"><span data-i18n="tocCurrentLabel">01. Начало пути</span> <span>▾</span></button>
       <div class="toc-list" id="toc-list" hidden>
@@ -166,47 +166,47 @@
       <p class="dim small" data-i18n="aboutBookDesc">Манифест о вере, свободе и праве начать заново.</p>
       <a href="index.html#books" class="text-btn" data-testid="button-reader-details" data-i18n="detailsLink">Детали книги →</a>
     </div>
-    <p class="sidebar-secure">🛡 Прогресс сохраняется на этом устройстве</p>
+    <p class="sidebar-secure" data-i18n="progressSavedText">🛡 Прогресс сохраняется на этом устройстве</p>
   </aside>
 </main>
 
 <div class="mobile-continue-bar">
   <span>34%</span>
   <div class="progress-track small"><div class="progress-fill"></div></div>
-  <button class="btn btn-primary btn-small" id="continue-mobile" data-testid="button-continue-mobile">Продолжить →</button>
+  <button class="btn btn-primary btn-small" id="continue-mobile" data-testid="button-continue-mobile" data-i18n="continueBtn">Продолжить →</button>
 </div>
 
 <!-- ===== Modals (shared) ===== -->
 <div class="modal-overlay" id="payment-modal" hidden>
   <div class="modal modal-payment" role="dialog" aria-modal="true">
-    <button class="modal-close" data-close="payment-modal" aria-label="Закрыть оплату">✕</button>
+    <button class="modal-close" data-close="payment-modal" aria-label="Закрыть оплату" data-i18n-aria-label="closePaymentAria">✕</button>
     <div id="payment-form">
-      <p class="eyebrow accent">Продолжение чтения</p>
-      <h2 class="modal-title">Поддержать автора и открыть книгу</h2>
-      <div class="price-row"><span>Доступ к полному тексту</span><b>290 ₽</b></div>
-      <p class="field-label">Выберите способ оплаты</p>
+      <p class="eyebrow accent" data-i18n="paywallEyebrow">Продолжение чтения</p>
+      <h2 class="modal-title" data-i18n="paymentModalTitle">Поддержать автора и открыть книгу</h2>
+      <div class="price-row"><span data-i18n="fullAccessLabel">Доступ к полному тексту</span><b>290 ₽</b></div>
+      <p class="field-label" data-i18n="choosePaymentMethod">Выберите способ оплаты</p>
       <div class="method-row">
         <button class="method active" data-method="visa">VISA</button>
         <button class="method" data-method="mastercard">Mastercard</button>
-        <button class="method" data-method="mir">МИР</button>
+        <button class="method" data-method="mir" data-i18n="mirLabel">МИР</button>
       </div>
       <div class="secure-note">
         <span>💳</span>
         <div>
-          <p>Безопасная оплата картой</p>
-          <p class="dim">Демонстрационное окно: в настоящем продукте здесь откроется защищённая форма <span id="method-name">Visa</span>.</p>
+          <p data-i18n="secureCardPayment">Безопасная оплата картой</p>
+          <p class="dim"><span data-i18n="demoPaymentText">Демонстрационное окно: в настоящем продукте здесь откроется защищённая форма</span> <span id="method-name">Visa</span>.</p>
         </div>
       </div>
-      <button class="btn btn-accent btn-block" id="confirm-payment">Оплатить 290 ₽ →</button>
-      <p class="secured-line">🛡 Данные карты защищены</p>
+      <button class="btn btn-accent btn-block" id="confirm-payment" data-i18n="payButtonText">Оплатить 290 ₽ →</button>
+      <p class="secured-line" data-i18n="cardDataProtected">🛡 Данные карты защищены</p>
     </div>
     <div id="payment-success" hidden>
       <div class="success-body">
         <div class="success-icon">✓</div>
-        <p class="eyebrow accent">Оплата прошла</p>
-        <h2 class="modal-title">Страницы открыты</h2>
-        <p class="dim">Спасибо за поддержку автора. Продолжение книги уже доступно в этом превью.</p>
-        <button class="btn btn-primary" id="close-payment-success">Вернуться к чтению</button>
+        <p class="eyebrow accent" data-i18n="paymentSuccessEyebrow">Оплата прошла</p>
+        <h2 class="modal-title" data-i18n="pagesUnlockedTitle">Страницы открыты</h2>
+        <p class="dim" data-i18n="thankYouText">Спасибо за поддержку автора. Продолжение книги уже доступно в этом превью.</p>
+        <button class="btn btn-primary" id="close-payment-success" data-i18n="backToReadingBtn">Вернуться к чтению</button>
       </div>
     </div>
   </div>
@@ -214,25 +214,25 @@
 
 <div class="modal-overlay" id="admin-modal" hidden>
   <div class="modal modal-admin" role="dialog" aria-modal="true">
-    <button class="modal-close" data-close="admin-modal" aria-label="Закрыть вход автора">✕</button>
+    <button class="modal-close" data-close="admin-modal" aria-label="Закрыть вход автора" data-i18n-aria-label="closeAdminAria">✕</button>
     <div id="admin-login">
-      <p class="eyebrow accent">Закрытый вход</p>
-      <h2 class="modal-title">Пространство автора</h2>
-      <p class="dim">Демонстрационный вход для управления библиотекой Фуада Алиева.</p>
-      <input class="text-input" placeholder="Логин автора" data-testid="input-admin-login">
-      <input class="text-input" type="password" placeholder="Пароль" data-testid="input-admin-password">
-      <button class="btn btn-primary btn-block" id="admin-login-btn">Войти в редактор →</button>
+      <p class="eyebrow accent" data-i18n="privateLoginEyebrow">Закрытый вход</p>
+      <h2 class="modal-title" data-i18n="authorSpaceTitle">Пространство автора</h2>
+      <p class="dim" data-i18n="demoLoginText">Демонстрационный вход для управления библиотекой Фуада Алиева.</p>
+      <input class="text-input" placeholder="Логин автора" data-i18n-placeholder="authorLoginPlaceholder" data-testid="input-admin-login">
+      <input class="text-input" type="password" placeholder="Пароль" data-i18n-placeholder="passwordPlaceholder" data-testid="input-admin-password">
+      <button class="btn btn-primary btn-block" id="admin-login-btn" data-i18n="enterEditorBtn">Войти в редактор →</button>
     </div>
     <div id="admin-editor" hidden>
-      <div class="editor-flag">✓ <span>Режим автора</span></div>
-      <h2 class="modal-title">Редактор библиотеки</h2>
-      <p class="dim">Здесь можно будет создавать книги, редактировать страницы, вставлять изображения и управлять публикациями.</p>
+      <div class="editor-flag">✓ <span data-i18n="authorModeLabel">Режим автора</span></div>
+      <h2 class="modal-title" data-i18n="libraryEditorTitle">Редактор библиотеки</h2>
+      <p class="dim" data-i18n="editorDescText">Здесь можно будет создавать книги, редактировать страницы, вставлять изображения и управлять публикациями.</p>
       <div class="editor-grid">
-        <button class="editor-btn" id="admin-new-book">✎ Новая книга</button>
-        <button class="editor-btn" id="admin-pages">📄 Страницы</button>
+        <button class="editor-btn" id="admin-new-book" data-i18n="newBookBtn">✎ Новая книга</button>
+        <button class="editor-btn" id="admin-pages" data-i18n="pagesBtn">📄 Страницы</button>
       </div>
       <p class="editor-notice" id="editor-notice" hidden></p>
-      <button class="btn btn-primary btn-block" data-close="admin-modal">Вернуться в библиотеку</button>
+      <button class="btn btn-primary btn-block" data-close="admin-modal" data-i18n="backToLibraryBtn">Вернуться в библиотеку</button>
     </div>
   </div>
 </div>
@@ -241,12 +241,12 @@
   <div class="modal modal-search" role="dialog" aria-modal="true">
     <div class="search-row">
       <span>🔍</span>
-      <input type="text" id="search-input" placeholder="Найти книгу или текст" autocomplete="off">
-      <button data-close="search-modal" aria-label="Закрыть поиск">✕</button>
+      <input type="text" id="search-input" placeholder="Найти книгу или текст" data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+      <button data-close="search-modal" aria-label="Закрыть поиск" data-i18n-aria-label="closeSearchAria">✕</button>
     </div>
-    <p class="search-status" id="search-status">Книга в библиотеке</p>
+    <p class="search-status" id="search-status" data-i18n="bookInLibraryStatus">Книга в библиотеке</p>
     <a href="book.html" class="search-result" data-testid="button-search-result">
-      <div><p class="search-result-title">Изначальный код Вселенной</p><p class="search-result-sub">Фуад Алиев · философия</p></div>
+      <div><p class="search-result-title" data-i18n="bookTitle">Изначальный код Вселенной</p><p class="search-result-sub"><span data-i18n="authorName">Фуад Алиев</span> · <span data-i18n="categoryLabel">философия</span></p></div>
       <span>→</span>
     </a>
   </div>
