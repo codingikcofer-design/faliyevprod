@@ -32,6 +32,12 @@
       Книга или автор
     </button>
 
+    <div class="lang-switch" id="lang-switch" role="group" aria-label="Язык книги">
+      <button class="lang-btn" data-lang="ru" data-testid="button-lang-ru">RU</button>
+      <button class="lang-btn" data-lang="en" data-testid="button-lang-en">EN</button>
+      <button class="lang-btn" data-lang="tr" data-testid="button-lang-tr">TR</button>
+    </div>
+
     <nav class="main-nav" aria-label="Основная навигация">
       <a href="index.html#books">Что выбрать</a>
       <a href="index.html#books">Библиотека</a>
@@ -61,6 +67,11 @@
     <a href="index.html#books">Библиотека</a>
     <a href="#about" id="nav-about-mobile">Об авторе</a>
     <button id="search-trigger-mobile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Найти книгу</button>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Язык книги">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
   </div>
 </header>
 
@@ -74,8 +85,8 @@
         <p class="hero-lead">Читайте тексты Фуада Алиева в удобном формате. Выберите книгу, познакомьтесь с идеями автора и начните чтение с первой страницы.</p>
       </div>
       <div class="hero-note">
-        «Изначальный код Вселенной» — первая опубликованная книга библиотеки.
-        <span>Открыта для чтения</span>
+        «<span data-i18n="bookTitle">Изначальный код Вселенной</span>» — <span data-i18n="heroNoteRest">первая опубликованная книга библиотеки.</span>
+        <span data-i18n="openToRead">Открыта для чтения</span>
       </div>
     </div>
   </section>
@@ -84,17 +95,17 @@
     <div class="shelf-head">
       <div>
         <h2 class="shelf-title-main">Все книги</h2>
-        <p class="shelf-count">1 книга в библиотеке</p>
+        <p class="shelf-count" data-i18n="shelfCount">1 книга в библиотеке</p>
       </div>
     </div>
     <div class="shelf-row">
       <a href="book.html" class="shelf-card" data-testid="card-book-iznachalnyy">
         <div class="shelf-cover">
-          <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»" data-testid="img-book-cover-hero">
+          <img src="assets/cover.jpg" alt="Обложка книги «Изначальный код Вселенной»" data-testid="img-book-cover-hero" class="book-cover-img">
         </div>
         <div class="shelf-stars" aria-hidden="true"><span class="filled">★★★★</span><span class="empty">★</span></div>
-        <p class="shelf-book-title">Изначальный код Вселенной</p>
-        <p class="shelf-author">Фуад Алиев</p>
+        <p class="shelf-book-title" data-i18n="bookTitle">Изначальный код Вселенной</p>
+        <p class="shelf-author" data-i18n="authorName">Фуад Алиев</p>
       </a>
       <div class="shelf-card shelf-card-soon" data-testid="card-book-soon">
         <div class="shelf-cover shelf-cover-soon">📄</div>
@@ -242,7 +253,7 @@
     </div>
     <p class="search-status" id="search-status">Книга в библиотеке</p>
     <a href="book.html" class="search-result" data-testid="button-search-result">
-      <div><p class="search-result-title">Изначальный код Вселенной</p><p class="search-result-sub">Фуад Алиев · философия</p></div>
+      <div><p class="search-result-title" data-i18n="bookTitle">Изначальный код Вселенной</p><p class="search-result-sub"><span data-i18n="authorName">Фуад Алиев</span> · <span data-i18n="categoryLabel">философия</span></p></div>
       <span>→</span>
     </a>
   </div>

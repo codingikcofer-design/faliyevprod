@@ -32,6 +32,12 @@
       Книга или автор
     </button>
 
+    <div class="lang-switch" id="lang-switch" role="group" aria-label="Язык книги">
+      <button class="lang-btn" data-lang="ru" data-testid="button-lang-ru">RU</button>
+      <button class="lang-btn" data-lang="en" data-testid="button-lang-en">EN</button>
+      <button class="lang-btn" data-lang="tr" data-testid="button-lang-tr">TR</button>
+    </div>
+
     <nav class="main-nav" aria-label="Основная навигация">
       <a href="index.html#books">Что выбрать</a>
       <a href="index.html#books">Библиотека</a>
@@ -61,6 +67,11 @@
     <a href="index.html#books">Библиотека</a>
     <a href="index.html#about">Об авторе</a>
     <button id="search-trigger-mobile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Найти книгу</button>
+    <div class="lang-switch lang-switch-mobile" role="group" aria-label="Язык книги">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
   </div>
 </header>
 
@@ -68,7 +79,7 @@
   <div class="site-container reader-bar-row">
     <a href="index.html" class="reader-back">← Библиотека</a>
     <span class="reader-sep"></span>
-    <span class="reader-title-inline">Изначальный код Вселенной</span>
+    <span class="reader-title-inline" data-i18n="bookTitle">Изначальный код Вселенной</span>
     <div class="reader-bar-actions">
       <button id="save-toggle" class="icon-btn" aria-label="Сохранить книгу" data-testid="button-save-book">🔖</button>
       <button id="copy-quote-top" class="text-btn"><span id="copy-top-label">📋 Цитата</span></button>
@@ -80,33 +91,33 @@
 
 <main class="site-container reader-layout">
   <article class="reader-article fade-in">
-    <p class="eyebrow accent">Глава первая · Начало пути</p>
-    <h1 class="reader-title">Изначальный код Вселенной</h1>
-    <p class="reader-subtitle">Бог, свобода и иллюзия религий</p>
+    <p class="eyebrow accent" data-i18n="chapterEyebrow">Глава первая · Начало пути</p>
+    <h1 class="reader-title" data-i18n="bookTitle">Изначальный код Вселенной</h1>
+    <p class="reader-subtitle" data-i18n="subtitle">Бог, свобода и иллюзия религий</p>
 
     <div class="reader-author-row">
       <span class="author-initials">ФА</span>
-      <span><b>Фуад Алиев</b><br>автор книги</span>
-      <span class="reader-progress-label">34% прочитано</span>
+      <span><b data-i18n="authorName">Фуад Алиев</b><br><span data-i18n="authorRoleLabel">автор книги</span></span>
+      <span class="reader-progress-label">34% <span data-i18n="progressReadSuffix">прочитано</span></span>
     </div>
 
     <div class="reader-copy">
-      <p class="lead-paragraph">Что, если веками институты власти и традиционные религии скрывали от нас истинное лицо Создателя, подменяя Его бесконечную любовь парализующим страхом?</p>
-      <p>В этой глубокой и откровенной книге-манифесте общественный деятель Фуад Алиев предлагает читателю совершить смелый интеллектуальный прорыв — отделить величие Космического Архитектора от корыстных догм человеческих организаций. Автор шаг за шагом раскрывает, как элиты прошлого «приватизировали» имя Творца для развязывания войн, контроля и обогащения.</p>
+      <p class="lead-paragraph" data-i18n="lead">Что, если веками институты власти и традиционные религии скрывали от нас истинное лицо Создателя, подменяя Его бесконечную любовь парализующим страхом?</p>
+      <p data-i18n="body1">В этой глубокой и откровенной книге-манифесте общественный деятель Фуад Алиев предлагает читателю совершить смелый интеллектуальный прорыв — отделить величие Космического Архитектора от корыстных догм человеческих организаций. Автор шаг за шагом раскрывает, как элиты прошлого «приватизировали» имя Творца для развязывания войн, контроля и обогащения.</p>
       <blockquote>
-        «Эта книга — не против веры. Она — за истинные отношения с Творцом».
+        <span data-i18n="quote">«Эта книга — не против веры. Она — за истинные отношения с Творцом».</span>
         <button id="copy-quote-inline" class="text-btn small"><span id="copy-inline-label">📋 Скопировать цитату</span></button>
       </blockquote>
-      <p>Объединяя выводы великих мыслителей от Канта и Гоббса до Эйнштейна и Франкла, автор доказывает, что наука и книги не отдаляют человека от Бога, а приближают к Нему. Вы узнаете, как работает «изначальный код Вселенной», почему глобальные катаклизмы — это божественный сигнал тревоги, и как в детстве зарождается первая невидимая трещина души, мешающая нам радоваться жизни.</p>
+      <p data-i18n="body2">Объединяя выводы великих мыслителей от Канта и Гоббса до Эйнштейна и Франкла, автор доказывает, что наука и книги не отдаляют человека от Бога, а приближают к Нему. Вы узнаете, как работает «изначальный код Вселенной», почему глобальные катаклизмы — это божественный сигнал тревоги, и как в детстве зарождается первая невидимая трещина души, мешающая нам радоваться жизни.</p>
     </div>
 
     <section class="paywall">
       <div class="paywall-icon">🛡</div>
       <div>
-        <p class="eyebrow accent">Продолжение чтения</p>
-        <h3>Откройте полный текст книги</h3>
-        <p class="dim">После первых страниц продолжение доступно после разовой поддержки автора — 290 ₽.</p>
-        <button class="btn btn-primary" id="paywall-continue" data-testid="button-paywall-continue">Продолжить чтение →</button>
+        <p class="eyebrow accent" data-i18n="paywallEyebrow">Продолжение чтения</p>
+        <h3 data-i18n="paywallTitle">Откройте полный текст книги</h3>
+        <p class="dim" data-i18n="paywallText">После первых страниц продолжение доступно после разовой поддержки автора — 290 ₽.</p>
+        <button class="btn btn-primary" id="paywall-continue" data-testid="button-paywall-continue" data-i18n="paywallBtn">Продолжить чтение →</button>
       </div>
     </section>
 
@@ -114,7 +125,7 @@
       <div class="comments-head">
         <div>
           <p class="eyebrow accent">Диалог читателей</p>
-          <h2>Комментарии <span id="comment-count">(2)</span></h2>
+          <h2>Комментарии <span id="comment-count">(0)</span></h2>
         </div>
         <span>💬</span>
       </div>
@@ -126,14 +137,7 @@
         </div>
       </div>
       <div class="comment-list" id="comment-list">
-        <div class="comment" data-testid="comment-1">
-          <span class="comment-initials">МК</span>
-          <div><div class="comment-meta"><b>Мария К.</b><span>сегодня, 10:42</span></div><p>Редкий текст, который не требует согласия — только честного диалога с собой.</p></div>
-        </div>
-        <div class="comment" data-testid="comment-2">
-          <span class="comment-initials">АР</span>
-          <div><div class="comment-meta"><b>Алексей Р.</b><span>вчера, 19:08</span></div><p>Зацепила мысль о том, как детские слова становятся первой трещиной души.</p></div>
-        </div>
+        <p class="comment-empty" id="comment-empty">Пока нет комментариев — станьте первым, кто поделится мыслью.</p>
       </div>
     </section>
   </article>
@@ -141,26 +145,26 @@
   <aside class="reader-sidebar">
     <div class="sidebar-card">
       <div class="sidebar-toc-head">
-        <span class="eyebrow accent" style="margin:0">Содержание</span>
+        <span class="eyebrow accent" style="margin:0" data-i18n="tocEyebrowLabel">Содержание</span>
         <button id="toc-toggle" aria-label="Открыть содержание" data-testid="button-chapters">▾</button>
       </div>
-      <button class="toc-current" id="toc-selector" data-testid="button-chapter-selector">01. Начало пути <span>▾</span></button>
+      <button class="toc-current" id="toc-selector" data-testid="button-chapter-selector"><span data-i18n="tocCurrentLabel">01. Начало пути</span> <span>▾</span></button>
       <div class="toc-list" id="toc-list" hidden>
-        <p class="toc-active">01 — Начало пути</p>
-        <p>02 — Свобода как дар</p>
-        <p>03 — Космический Архитектор</p>
+        <button class="toc-item toc-active" type="button" data-chapter="1" data-testid="button-toc-chapter-1"><span data-i18n="tocCh1">01 — Начало пути</span></button>
+        <button class="toc-item toc-locked" type="button" data-chapter="2" data-testid="button-toc-chapter-2">🔒 <span data-i18n="tocCh2">02 — Свобода как дар</span></button>
+        <button class="toc-item toc-locked" type="button" data-chapter="3" data-testid="button-toc-chapter-3">🔒 <span data-i18n="tocCh3">03 — Космический Архитектор</span></button>
       </div>
       <div class="sidebar-progress">
-        <div class="sidebar-progress-row"><span>Прогресс</span><b>34%</b></div>
+        <div class="sidebar-progress-row"><span data-i18n="progressLabel">Прогресс</span><b>34%</b></div>
         <div class="progress-track"><div class="progress-fill"></div></div>
-        <div class="sidebar-progress-row small"><span>🕐 4 ч 20 мин</span><span>👁 1 284</span></div>
+        <div class="sidebar-progress-row small"><span>🕐 <span data-i18n="readingTime">4 ч 20 мин</span></span></div>
       </div>
     </div>
     <div class="sidebar-card" id="about-book">
-      <p class="eyebrow accent">О книге</p>
-      <p class="sidebar-book-title">Любовь вместо страха.</p>
-      <p class="dim small">Манифест о вере, свободе и праве начать заново.</p>
-      <a href="index.html#books" class="text-btn" data-testid="button-reader-details">Детали книги →</a>
+      <p class="eyebrow accent" data-i18n="aboutBookEyebrow">О книге</p>
+      <p class="sidebar-book-title" data-i18n="aboutBookTitleShort">Любовь вместо страха.</p>
+      <p class="dim small" data-i18n="aboutBookDesc">Манифест о вере, свободе и праве начать заново.</p>
+      <a href="index.html#books" class="text-btn" data-testid="button-reader-details" data-i18n="detailsLink">Детали книги →</a>
     </div>
     <p class="sidebar-secure">🛡 Прогресс сохраняется на этом устройстве</p>
   </aside>
